@@ -1,0 +1,22 @@
+﻿# Data
+atlantic/data/
+pacific/data/
+indian/data/
+
+# Model artifacts
+*.pt
+*.pkl
+
+# Virtual environment
+venv/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# OS / Editor
+.vscode/
+.DS_Store
+
+# Colab checkpoints
+.ipynb_checkpoints/
