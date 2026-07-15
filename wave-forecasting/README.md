@@ -89,7 +89,7 @@ wave-forecasting/
 |---|---|---|---|
 | 0 | Repo & Environment Setup | Git init, venv, folder skeleton (incl. empty pacific/ and indian/ placeholders), requirements, formulas.md | Pending |
 | 1 | Data Loading & Merging | Load + merge raw CSVs (mwd, mwp, swh — no mdts/mdww, not in time-series product) | Complete |
-| 2 | Data Cleaning | Gap detection, interpolation, dedup | Pending |
+| 2 | Data Cleaning | Gap detection, interpolation, dedup | Complete |
 | 3 | Feature Engineering | sin/cos encoding on mwd → 6 input channels | Pending |
 | 4 | Label Definition | mwp_class bins (Atlantic edges confirmed via quartile split) | Pending |
 | 5 | Forecasting Targets | 20-step future target construction (swh, mwp, mwd) | Pending |
