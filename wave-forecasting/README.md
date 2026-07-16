@@ -91,7 +91,7 @@ wave-forecasting/
 | 1 | Data Loading & Merging | Load + merge raw CSVs (mwd, mwp, swh — no mdts/mdww, not in time-series product) | Complete |
 | 2 | Data Cleaning | Gap detection, interpolation, dedup | Complete |
 | 3 | Feature Engineering | sin/cos encoding on mwd → 6 input channels | Complete |
-| 4 | Label Definition | mwp_class bins (Atlantic edges confirmed via quartile split) | Pending |
+| 4 | Label Definition | mwp_class bins (Atlantic edges confirmed via quartile split) | Complete |
 | 5 | Forecasting Targets | 20-step future target construction (swh, mwp, mwd) | Pending |
 | 6 | Train/Test Split | Chronological 70/30 split | Pending |
 | 7 | Normalization | Train-only StandardScaler fit/apply | Pending |
