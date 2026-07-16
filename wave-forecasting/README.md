@@ -95,7 +95,7 @@ wave-forecasting/
 | 5 | Forecasting Targets | 20-step future target construction (swh, mwp, mwd) | Complete |
 | 6 | Train/Test Split | Chronological 70/30 split | Complete |
 | 7 | Normalization | Train-only StandardScaler fit/apply | Complete |
-| 8 | Sequence Windowing | 72h input windows [72,6], per-split | Pending |
+| 8 | Sequence Windowing | 72h input windows [72,6], per-split | Complete |
 | 9 | PatchTST Architecture | Patch embedding (72-dim raw patch) + transformer + dual heads | Pending |
 | 10 | Training Setup | Loss, optimizer, scheduler, val slice | Pending |
 | 11 | Model Training | Full training loop on Colab GPU | Pending |
