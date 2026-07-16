@@ -92,7 +92,7 @@ wave-forecasting/
 | 2 | Data Cleaning | Gap detection, interpolation, dedup | Complete |
 | 3 | Feature Engineering | sin/cos encoding on mwd → 6 input channels | Complete |
 | 4 | Label Definition | mwp_class bins (Atlantic edges confirmed via quartile split) | Complete |
-| 5 | Forecasting Targets | 20-step future target construction (swh, mwp, mwd) | Pending |
+| 5 | Forecasting Targets | 20-step future target construction (swh, mwp, mwd) | Complete |
 | 6 | Train/Test Split | Chronological 70/30 split | Pending |
 | 7 | Normalization | Train-only StandardScaler fit/apply | Pending |
 | 8 | Sequence Windowing | 72h input windows [72,6], per-split | Pending |
