@@ -97,7 +97,7 @@ wave-forecasting/
 | 7 | Normalization | Train-only StandardScaler fit/apply | Complete |
 | 8 | Sequence Windowing | 72h input windows [72,6], per-split | Complete |
 | 9 | PatchTST Architecture | Patch embedding (72-dim raw patch) + transformer + dual heads | Complete |
-| 10 | Training Setup | Loss, optimizer, scheduler, val slice | Pending |
+| 10 | Training Setup | Loss, optimizer, scheduler, val slice | Complete |
 | 11 | Model Training | Full training loop on Colab GPU | Pending |
 | 12 | Model Evaluation | Classification + forecasting metrics | Pending |
 | 13 | Comparison with Mamba | Head-to-head results table | Pending |
