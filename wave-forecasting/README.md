@@ -99,6 +99,6 @@ wave-forecasting/
 | 9 | PatchTST Architecture | Patch embedding (72-dim raw patch) + transformer + dual heads | Complete |
 | 10 | Training Setup | Loss, optimizer, scheduler, val slice | Complete |
 | 11 | Model Training | Full training loop on Colab GPU | Complete |
-| 12 | Model Evaluation | Classification + forecasting metrics | Pending |
+| 12 | Model Evaluation | Classification + forecasting metrics | Complete |
 | 13 | Comparison with Mamba | Head-to-head results table | Pending |
 | 14 | Documentation & Reporting | Diagrams, formula citations, written analysis, final report | Pending |
