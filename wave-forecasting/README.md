@@ -100,5 +100,5 @@ wave-forecasting/
 | 10 | Training Setup | Loss, optimizer, scheduler, val slice | Complete |
 | 11 | Model Training | Full training loop on Colab GPU | Complete |
 | 12 | Model Evaluation | Classification + forecasting metrics | Complete |
-| 13 | Comparison with Mamba | Head-to-head results table | Pending |
-| 14 | Documentation & Reporting | Diagrams, formula citations, written analysis, final report | Pending |
+| 13 | Comparison with Mamba | Head-to-head results table | Held (batched across all 3 oceans) |
+| 14 | Documentation & Reporting | Diagrams, formula citations, written analysis, final report | Complete (Atlantic; Mamba section pending Phase 13) |
