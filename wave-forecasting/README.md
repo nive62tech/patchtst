@@ -45,26 +45,48 @@ wave-forecasting/
 │   │   ├── atlantic_merged.csv
 │   │   ├── atlantic_clean.csv
 │   │   ├── atlantic_features.csv
+│   │   ├── atlantic_train.csv, atlantic_test.csv
+│   │   ├── atlantic_train_scaled.csv, atlantic_test_scaled.csv
 │   │   └── windows/
+│   │       ├── X_train.npy, y_class_train.npy, y_forecast_train.npy
+│   │       └── X_test.npy, y_class_test.npy, y_forecast_test.npy
 │   ├── scaler_atlantic.pkl
 │   ├── atlantic_patchtst_best.pt
+│   ├── PHASE1_README.md ... PHASE12_README.md
+│   └── results/
+│       ├── training_curves.png
+│       ├── confusion_matrix.png
+│       ├── horizon_error_curve.png
+│       └── metrics_report.json
+├── pacific/
+│   ├── data/
+│   │   ├── pacific_raw_file1.csv         (u10, v10, u100, v100, fg10)
+│   │   ├── pacific_raw_file2.csv         (mwd, mwp, swh)
+│   │   ├── pacific_merged.csv
+│   │   ├── pacific_clean.csv
+│   │   ├── pacific_features.csv
+│   │   ├── pacific_train.csv, pacific_test.csv
+│   │   ├── pacific_train_scaled.csv, pacific_test_scaled.csv
+│   │   └── windows/
+│   ├── scaler_pacific.pkl
+│   ├── pacific_patchtst_best.pt
 │   └── results/
 │       ├── training_curves.png
 │       ├── confusion_matrix.png
 │       ├── horizon_error_curve.png
 │       └── metrics_report.json
 ├── src/
-│   ├── data_pipeline.py
-│   ├── data_cleaning.py
-│   ├── feature_engineering.py
-│   ├── labels.py
+│   ├── data_pipeline.py       (ocean-parameterized)
+│   ├── data_cleaning.py       (ocean-parameterized)
+│   ├── feature_engineering.py (ocean-parameterized)
+│   ├── labels.py               (ocean-parameterized)
 │   ├── targets.py
-│   ├── split.py
-│   ├── normalize.py
-│   ├── windowing.py
+│   ├── split.py                (ocean-parameterized)
+│   ├── normalize.py            (ocean-parameterized)
+│   ├── windowing.py            (ocean-parameterized)
 │   ├── train_config.py
-│   ├── train.py
-│   ├── evaluate.py
+│   ├── train.py                (ocean-parameterized)
+│   ├── evaluate.py             (ocean-parameterized)
 │   └── compare.py
 ├── patchtst_model.py
 ├── notebooks/
@@ -74,14 +96,14 @@ wave-forecasting/
 ├── docs/
 │   ├── formulas.md
 │   └── report.md
-├── pacific/
-│   └── .gitkeep
 ├── indian/
 │   └── .gitkeep
 ├── requirements.txt
 ├── .gitignore
 └── README.md
 ```
+
+`pacific/` is now built out to mirror `atlantic/` exactly — same subfolder structure, own independently-computed `mwp_class` bin edges, own scaler, own checkpoint. `indian/` remains a placeholder until its location is confirmed. The `src/` scripts marked "ocean-parameterized" get refactored in Pacific's Phase 0 to accept an ocean name rather than being hardcoded to Atlantic paths — `targets.py`, `train_config.py`, and `patchtst_model.py`/`compare.py` don't need this since they're already ocean-agnostic (pure logic/architecture, no hardcoded ocean paths).
 
 ## Phase Progress
 
@@ -102,3 +124,25 @@ wave-forecasting/
 | 12 | Model Evaluation | Classification + forecasting metrics | Complete |
 | 13 | Comparison with Mamba | Head-to-head results table | Held (batched across all 3 oceans) |
 | 14 | Documentation & Reporting | Diagrams, formula citations, written analysis, final report | Complete (Atlantic; Mamba section pending Phase 13) |
+
+## Pacific Phase Progress
+
+Reuses the same pipeline and phase structure as Atlantic. Own independently-computed `mwp_class` bin edges (not shared with Atlantic). Location: **TBD — needed before Phase 1 can run.**
+
+| Phase | Name | Covers | Status |
+|---|---|---|---|
+| 0 | Pacific Setup & Script Refactor | Parameterize src/ scripts for multi-ocean reuse, create pacific/data + pacific/results skeleton | Pending |
+| 1 | Data Loading & Merging | Load + merge Pacific raw CSVs | Pending |
+| 2 | Data Cleaning | Gap detection, interpolation, dedup | Pending |
+| 3 | Feature Engineering | sin/cos encoding on mwd → 6 input channels | Pending |
+| 4 | Label Definition | New quartile-based mwp_class bins, computed independently from Pacific's data | Pending |
+| 5 | Forecasting Targets | 20-step future target construction (swh, mwp, mwd) | Pending |
+| 6 | Train/Test Split | Chronological 70/30 split | Pending |
+| 7 | Normalization | Train-only StandardScaler fit/apply, own scaler_pacific.pkl | Pending |
+| 8 | Sequence Windowing | 72h input windows [72,6], per-split | Pending |
+| 9 | PatchTST Architecture | Same architecture, new training run | Pending |
+| 10 | Training Setup | Same loss/optimizer/scheduler config | Pending |
+| 11 | Model Training | Full training loop on Colab GPU | Pending |
+| 12 | Model Evaluation | Classification + forecasting metrics | Pending |
+| 13 | Comparison with Mamba | Held (batched across all 3 oceans) | Held |
+| 14 | Documentation & Reporting | Pacific section of docs/report.md | Pending |
