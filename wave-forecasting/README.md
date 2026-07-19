@@ -131,8 +131,8 @@ Reuses the same pipeline and phase structure as Atlantic. Own independently-comp
 
 | Phase | Name | Covers | Status |
 |---|---|---|---|
-| 0 | Pacific Setup & Script Refactor | Parameterize src/ scripts for multi-ocean reuse, create pacific/data + pacific/results skeleton | Pending |
-| 1 | Data Loading & Merging | Load + merge Pacific raw CSVs | Pending |
+| 0 | Pacific Setup | Create pacific/data + pacific/results skeleton (dedicated per-ocean scripts used instead of a shared parameterized refactor) | Complete |
+| 1 | Data Loading & Merging | Load + merge Pacific raw CSVs | Complete |
 | 2 | Data Cleaning | Gap detection, interpolation, dedup | Pending |
 | 3 | Feature Engineering | sin/cos encoding on mwd → 6 input channels | Pending |
 | 4 | Label Definition | New quartile-based mwp_class bins, computed independently from Pacific's data | Pending |
