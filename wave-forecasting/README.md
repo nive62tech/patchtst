@@ -134,7 +134,7 @@ Reuses the same pipeline and phase structure as Atlantic. Own independently-comp
 | 0 | Pacific Setup | Create pacific/data + pacific/results skeleton (dedicated per-ocean scripts used instead of a shared parameterized refactor) | Complete |
 | 1 | Data Loading & Merging | Load + merge Pacific raw CSVs | Complete |
 | 2 | Data Cleaning | Gap detection, interpolation, dedup | Complete |
-| 3 | Feature Engineering | sin/cos encoding on mwd → 6 input channels | Pending |
+| 3 | Feature Engineering | sin/cos encoding on mwd → 6 input channels | Complete |
 | 4 | Label Definition | New quartile-based mwp_class bins, computed independently from Pacific's data | Pending |
 | 5 | Forecasting Targets | 20-step future target construction (swh, mwp, mwd) | Pending |
 | 6 | Train/Test Split | Chronological 70/30 split | Pending |
