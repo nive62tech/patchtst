@@ -137,8 +137,8 @@ Reuses the same pipeline and phase structure as Atlantic. Own independently-comp
 | 3 | Feature Engineering | sin/cos encoding on mwd → 6 input channels | Complete |
 | 4 | Label Definition | mwp_class bins (Pacific edges confirmed via quartile split: [5.750778, 7.5365458, 8.3817325, 9.60272075, 16.787636]) | Complete |
 | 5 | Forecasting Targets | 20-step future target construction (swh, mwp, mwd) | Complete |
-| 6 | Train/Test Split | Chronological 70/30 split | Pending |
-| 7 | Normalization | Train-only StandardScaler fit/apply, own scaler_pacific.pkl | Pending |
+| 6 | Train/Test Split | Chronological 70/30 split | Complete |
+| 7 | Normalization | Train-only StandardScaler fit/apply, own scaler_pacific.pkl | Complete |
 | 8 | Sequence Windowing | 72h input windows [72,6], per-split | Pending |
 | 9 | PatchTST Architecture | Same architecture, new training run | Pending |
 | 10 | Training Setup | Same loss/optimizer/scheduler config | Pending |
