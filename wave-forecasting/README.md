@@ -141,8 +141,8 @@ Reuses the same pipeline and phase structure as Atlantic. Own independently-comp
 | 7 | Normalization | Train-only StandardScaler fit/apply, own scaler_pacific.pkl | Complete |
 | 8 | Sequence Windowing | 72h input windows [72,6], per-split | Complete |
 | 9 | PatchTST Architecture | Same architecture, new training run | Complete |
-| 10 | Training Setup | Same loss/optimizer/scheduler config | Pending |
-| 11 | Model Training | Full training loop on Colab GPU | Pending |
-| 12 | Model Evaluation | Classification + forecasting metrics | Pending |
+| 10 | Training Setup | Same loss/optimizer/scheduler config | Complete |
+| 11 | Model Training | Full training loop on Colab GPU | Complete |
+| 12 | Model Evaluation | Classification + forecasting metrics | Complete |
 | 13 | Comparison with Mamba | Held (batched across all 3 oceans) | Held |
 | 14 | Documentation & Reporting | Pacific section of docs/report.md | Pending |
