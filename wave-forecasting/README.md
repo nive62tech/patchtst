@@ -139,7 +139,7 @@ Reuses the same pipeline and phase structure as Atlantic. Own independently-comp
 | 5 | Forecasting Targets | 20-step future target construction (swh, mwp, mwd) | Complete |
 | 6 | Train/Test Split | Chronological 70/30 split | Complete |
 | 7 | Normalization | Train-only StandardScaler fit/apply, own scaler_pacific.pkl | Complete |
-| 8 | Sequence Windowing | 72h input windows [72,6], per-split | Pending |
+| 8 | Sequence Windowing | 72h input windows [72,6], per-split | Complete |
 | 9 | PatchTST Architecture | Same architecture, new training run | Pending |
 | 10 | Training Setup | Same loss/optimizer/scheduler config | Pending |
 | 11 | Model Training | Full training loop on Colab GPU | Pending |
