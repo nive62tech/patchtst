@@ -163,7 +163,9 @@ Reuses the same pipeline and phase structure as Atlantic. Own independently-comp
 | 6 | Train/test split | Complete |
 | 7 | Normalization | Complete |
 | 8 | Sequence windowing | Complete |
-| 9-15 | — | Pending |
+| 9 | Architecture (shared, unchanged) | Complete |
+| 10 | Training setup | Complete |
+| 11-15 | — | Pending |
 
 
 
@@ -180,4 +182,6 @@ Reuses the same pipeline and phase structure as Atlantic. Own independently-comp
 | 6 | Train/test split | Complete |
 | 7 | Normalization | Complete |
 | 8 | Sequence windowing | Complete |
-| 9-15 | — | Pending |
+| 9 | Architecture (shared, unchanged) | Complete |
+| 10 | Training setup | Complete |
+| 11-15 | — | Pending |
