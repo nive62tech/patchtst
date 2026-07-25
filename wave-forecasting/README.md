@@ -124,6 +124,7 @@ wave-forecasting/
 | 12 | Model Evaluation | Classification + forecasting metrics | Complete |
 | 13 | Comparison with Mamba | Head-to-head results table | Held (batched across all 3 oceans) |
 | 14 | Documentation & Reporting | Diagrams, formula citations, written analysis, final report | Complete (Atlantic; Mamba section pending Phase 13) |
+| 15 | Results Dashboard | 6-panel visual summary (loss curves, predicted vs actual, horizon-wise RMSE, confusion matrix, scatter plot) | Pending |
 
 ## Pacific Phase Progress
 
@@ -141,8 +142,58 @@ Reuses the same pipeline and phase structure as Atlantic. Own independently-comp
 | 7 | Normalization | Train-only StandardScaler fit/apply, own scaler_pacific.pkl | Complete |
 | 8 | Sequence Windowing | 72h input windows [72,6], per-split | Complete |
 | 9 | PatchTST Architecture | Same architecture, new training run | Complete |
-| 10 | Training Setup | Same loss/optimizer/scheduler config | Complete |
-| 11 | Model Training | Full training loop on Colab GPU | Complete |
-| 12 | Model Evaluation | Classification + forecasting metrics | Complete |
+| 10 | Training Setup | Same loss/optimizer/scheduler config | Pending |
+| 11 | Model Training | Full training loop on Colab GPU | Pending |
+| 12 | Model Evaluation | Classification + forecasting metrics | Pending |
 | 13 | Comparison with Mamba | Held (batched across all 3 oceans) | Held |
 | 14 | Documentation & Reporting | Pacific section of docs/report.md | Pending |
+| 15 | Results Dashboard | 6-panel visual summary (loss curves, predicted vs actual, horizon-wise RMSE, confusion matrix, scatter plot) | Pending |
+
+
+## Arabian Sea Phase Progress
+
+Reuses the same pipeline and phase structure as Atlantic. Own independently-computed `mwp_class` bin edges (not shared with Atlantic). Location: **TBD — needed before Phase 1 can run.**
+
+| Phase | Name | Covers | Status |
+|---|---|---|---|
+| 0 | Pacific Setup | Create pacific/data + pacific/results skeleton (dedicated per-ocean scripts used instead of a shared parameterized refactor) | Complete |
+| 1 | Data Loading & Merging | Load + merge Pacific raw CSVs | Complete |
+| 2 | Data Cleaning | Gap detection, interpolation, dedup | Pending |
+| 3 | Feature Engineering | sin/cos encoding on mwd → 6 input channels | Pending |
+| 4 | Label Definition | mwp_class bins (Pacific edges confirmed via quartile split: [5.750778, 7.5365458, 8.3817325, 9.60272075, 16.787636]) | Pending |
+| 5 | Forecasting Targets | 20-step future target construction (swh, mwp, mwd) | Pending |
+| 6 | Train/Test Split | Chronological 70/30 split | Pending |
+| 7 | Normalization | Train-only StandardScaler fit/apply, own scaler_pacific.pkl | Pending |
+| 8 | Sequence Windowing | 72h input windows [72,6], per-split | Pending |
+| 9 | PatchTST Architecture | Same architecture, new training run | Pending |
+| 10 | Training Setup | Same loss/optimizer/scheduler config | Pending |
+| 11 | Model Training | Full training loop on Colab GPU | Pending |
+| 12 | Model Evaluation | Classification + forecasting metrics | Pending |
+| 13 | Comparison with Mamba | Held (batched across all 3 oceans) | Held |
+| 14 | Documentation & Reporting | Pacific section of docs/report.md | Pending |
+| 15 | Results Dashboard | 6-panel visual summary (loss curves, predicted vs actual, horizon-wise RMSE, confusion matrix, scatter plot) | Pending |
+
+
+
+## Bay of Bengal Phase Progress
+
+Reuses the same pipeline and phase structure as Atlantic. Own independently-computed `mwp_class` bin edges (not shared with Atlantic). Location: **TBD — needed before Phase 1 can run.**
+
+| Phase | Name | Covers | Status |
+|---|---|---|---|
+| 0 | Pacific Setup | Create pacific/data + pacific/results skeleton (dedicated per-ocean scripts used instead of a shared parameterized refactor) | Complete |
+| 1 | Data Loading & Merging | Load + merge Pacific raw CSVs | Complete |
+| 2 | Data Cleaning | Gap detection, interpolation, dedup | Pending |
+| 3 | Feature Engineering | sin/cos encoding on mwd → 6 input channels | Pending |
+| 4 | Label Definition | mwp_class bins (Pacific edges confirmed via quartile split: [5.750778, 7.5365458, 8.3817325, 9.60272075, 16.787636]) | Pending |
+| 5 | Forecasting Targets | 20-step future target construction (swh, mwp, mwd) | Pending |
+| 6 | Train/Test Split | Chronological 70/30 split | Pending |
+| 7 | Normalization | Train-only StandardScaler fit/apply, own scaler_pacific.pkl | Pending |
+| 8 | Sequence Windowing | 72h input windows [72,6], per-split | Pending |
+| 9 | PatchTST Architecture | Same architecture, new training run | Pending |
+| 10 | Training Setup | Same loss/optimizer/scheduler config | Pending |
+| 11 | Model Training | Full training loop on Colab GPU | Pending |
+| 12 | Model Evaluation | Classification + forecasting metrics | Pending |
+| 13 | Comparison with Mamba | Held (batched across all 3 oceans) | Held |
+| 14 | Documentation & Reporting | Pacific section of docs/report.md | Pending |
+| 15 | Results Dashboard | 6-panel visual summary (loss curves, predicted vs actual, horizon-wise RMSE, confusion matrix, scatter plot) | Pending |
