@@ -158,7 +158,12 @@ Reuses the same pipeline and phase structure as Atlantic. Own independently-comp
 | 1 | Data loading & merging | Complete |
 | 2 | Data cleaning | Complete |
 | 3 | Feature engineering | Complete |
-| 4-15 | — | Pending |
+| 4 | Label definition | Complete |
+| 5 | Forecasting targets | Complete |
+| 6 | Train/test split | Complete |
+| 7 | Normalization | Complete |
+| 8 | Sequence windowing | Complete |
+| 9-15 | — | Pending |
 
 
 
@@ -170,4 +175,9 @@ Reuses the same pipeline and phase structure as Atlantic. Own independently-comp
 | 1 | Data loading & merging | Complete |
 | 2 | Data cleaning | Complete |
 | 3 | Feature engineering | Complete |
-| 4-15 | — | Pending |
+| 4 | Label definition | Complete |
+| 5 | Forecasting targets | Complete |
+| 6 | Train/test split | Complete |
+| 7 | Normalization | Complete |
+| 8 | Sequence windowing | Complete |
+| 9-15 | — | Pending |
