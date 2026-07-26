@@ -150,8 +150,7 @@ Reuses the same pipeline and phase structure as Atlantic. Own independently-comp
 | 15 | Results Dashboard | 6-panel visual summary (loss curves, predicted vs actual, horizon-wise RMSE, confusion matrix, scatter plot) | Pending |
 
 
-## Arabian Sea Phase Progress
-
+## Bay of Bengal
 | Phase | Description | Status |
 |---|---|---|
 | 0 | Folder skeleton | Complete |
@@ -163,17 +162,15 @@ Reuses the same pipeline and phase structure as Atlantic. Own independently-comp
 | 6 | Train/test split | Complete |
 | 7 | Normalization | Complete |
 | 8 | Sequence windowing | Complete |
-| 9 | Architecture (shared, unchanged) | Complete |
+| 9 | Architecture | Complete |
 | 10 | Training setup | Complete |
 | 11 | Colab GPU training | Complete |
 | 12 | Model evaluation | Complete |
 | 13 | Comparison with Mamba | Held |
-| 14 | Documentation | Pending |
+| 14 | Documentation | Complete |
 | 15 | Results dashboard | Complete |
 
-
-## Bay of Bengal Phase Progress
-
+## Arabian Sea
 | Phase | Description | Status |
 |---|---|---|
 | 0 | Folder skeleton | Complete |
@@ -185,10 +182,10 @@ Reuses the same pipeline and phase structure as Atlantic. Own independently-comp
 | 6 | Train/test split | Complete |
 | 7 | Normalization | Complete |
 | 8 | Sequence windowing | Complete |
-| 9 | Architecture (shared, unchanged) | Complete |
+| 9 | Architecture | Complete |
 | 10 | Training setup | Complete |
 | 11 | Colab GPU training | Complete |
 | 12 | Model evaluation | Complete |
 | 13 | Comparison with Mamba | Held |
-| 14 | Documentation | Pending |
+| 14 | Documentation | Complete |
 | 15 | Results dashboard | Complete |
