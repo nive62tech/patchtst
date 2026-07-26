@@ -166,7 +166,10 @@ Reuses the same pipeline and phase structure as Atlantic. Own independently-comp
 | 9 | Architecture (shared, unchanged) | Complete |
 | 10 | Training setup | Complete |
 | 11 | Colab GPU training | Complete |
-| 12-15 | — | Pending |
+| 12 | Model evaluation | Complete |
+| 13 | Comparison with Mamba | Held |
+| 14 | Documentation | Pending |
+| 15 | Results dashboard | Complete |
 
 
 ## Bay of Bengal Phase Progress
@@ -185,4 +188,7 @@ Reuses the same pipeline and phase structure as Atlantic. Own independently-comp
 | 9 | Architecture (shared, unchanged) | Complete |
 | 10 | Training setup | Complete |
 | 11 | Colab GPU training | Complete |
-| 12-15 | — | Pending |
+| 12 | Model evaluation | Complete |
+| 13 | Comparison with Mamba | Held |
+| 14 | Documentation | Pending |
+| 15 | Results dashboard | Complete |
