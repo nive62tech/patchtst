@@ -20,3 +20,7 @@ __pycache__/
 
 # Colab checkpoints
 .ipynb_checkpoints/
+
+
+arabian_sea/data/windows/
+bay_of_bengal/data/windows/

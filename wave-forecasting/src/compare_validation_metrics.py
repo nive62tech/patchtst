@@ -7,15 +7,13 @@ across all four oceans.
 
 PatchTST numbers are loaded live from each ocean's validation_metrics.json
 (Phase 12 output). Mamba numbers are hardcoded below, transcribed from the
-teammate's result tables (no machine-readable Mamba file was available for
-this comparison - only screenshotted tables), since these images were
-shared directly rather than the Mamba team writing to disk.
+teammate's SECOND (re-trained, more accurate) result set - these supersede
+an earlier, now-outdated transcription used in the first version of this
+script.
 
 Winner is determined by RMS Error (lower = better) - the single unambiguous
-accuracy metric of the four (unlike bias, where sign doesn't indicate
-better/worse, and unlike correlation/SI, which RMSE already captures the
-practical effect of). A note flags any row where the RMSE winner and the
-correlation-coefficient winner disagree.
+accuracy metric of the four. A note flags any row where the RMSE winner and
+the correlation-coefficient winner disagree.
 
 Saves: comparison/patchtst_vs_mamba_validation.csv
        comparison/patchtst_vs_mamba_validation.md
@@ -38,28 +36,28 @@ OCEAN_DISPLAY = {
 }
 VARIABLES = ["swh", "mwp", "mwd"]
 
-# Transcribed directly from the teammate's Mamba result tables (screenshots).
+# Transcribed from the teammate's SECOND (re-trained) Mamba result tables.
 # Keys: ocean -> variable -> {r, si, bias, rmse}
 MAMBA_METRICS = {
     "atlantic": {
-        "swh": {"r": 0.9748, "si": 0.1025, "bias": 0.0707, "rmse": 0.1800},
-        "mwp": {"r": 0.9769, "si": 0.0350, "bias": 0.0049, "rmse": 0.2713},
-        "mwd": {"r": 0.8115, "si": 0.4811, "bias": -3.2016, "rmse": 59.4123},
+        "swh": {"r": 0.9787, "si": 0.1141, "bias": 0.0607, "rmse": 0.1716},
+        "mwp": {"r": 0.9760, "si": 0.0388, "bias": -0.0482, "rmse": 0.3413},
+        "mwd": {"r": 0.9279, "si": 0.1018, "bias": -1.3912, "rmse": 18.3805},
     },
     "pacific": {
-        "swh": {"r": 0.9826, "si": 0.0681, "bias": 0.0746, "rmse": 0.1520},
-        "mwp": {"r": 0.9823, "si": 0.0346, "bias": 0.0140, "rmse": 0.2994},
-        "mwd": {"r": 0.8545, "si": 0.4457, "bias": -0.3156, "rmse": 58.9412},
+        "swh": {"r": 0.9811, "si": 0.0690, "bias": 0.0687, "rmse": 0.1539},
+        "mwp": {"r": 0.9813, "si": 0.0367, "bias": 0.0761, "rmse": 0.3177},
+        "mwd": {"r": 0.8492, "si": 0.4558, "bias": 1.3654, "rmse": 60.2926},
     },
     "bay_of_bengal": {
-        "swh": {"r": 0.9778, "si": 0.1167, "bias": 0.0746, "rmse": 0.1754},
-        "mwp": {"r": 0.9753, "si": 0.0390, "bias": -0.0182, "rmse": 0.3432},
-        "mwd": {"r": 0.9376, "si": 0.0946, "bias": -0.5789, "rmse": 17.0343},
+        "swh": {"r": 0.9750, "si": 0.1043, "bias": 0.0613, "rmse": 0.1833},
+        "mwp": {"r": 0.9762, "si": 0.0356, "bias": -0.0150, "rmse": 0.2760},
+        "mwd": {"r": 0.8094, "si": 0.4867, "bias": -1.1935, "rmse": 60.0275},
     },
     "arabian_sea": {
-        "swh": {"r": 0.9925, "si": 0.0990, "bias": 0.1126, "rmse": 0.1613},
-        "mwp": {"r": 0.9804, "si": 0.0335, "bias": 0.0212, "rmse": 0.2710},
-        "mwd": {"r": 0.8657, "si": 0.2307, "bias": -0.5895, "rmse": 44.2710},
+        "swh": {"r": 0.9918, "si": 0.0958, "bias": 0.1052, "rmse": 0.1561},
+        "mwp": {"r": 0.9810, "si": 0.0330, "bias": -0.0005, "rmse": 0.2667},
+        "mwd": {"r": 0.8454, "si": 0.2490, "bias": 1.3285, "rmse": 47.8113},
     },
 }
 
@@ -84,6 +82,7 @@ def load_patchtst_metrics(ocean: str) -> dict:
 def main():
     print("=" * 70)
     print("PHASE 13 (PARTIAL) - VALIDATION METRICS COMPARISON: PATCHTST vs MAMBA")
+    print("(Mamba numbers: re-trained/updated set)")
     print("=" * 70)
 
     rows = []
@@ -130,7 +129,6 @@ def main():
     df.to_csv(csv_path, index=False)
     print(f"\n[SAVED] {csv_path}")
 
-    # Build markdown summary table (RMSE-based winner, one row per ocean/variable)
     md_rows = []
     for ocean in OCEANS:
         for var in VARIABLES:
@@ -144,8 +142,8 @@ def main():
 
     md_content = (
         "# Validation Metrics Comparison — PatchTST vs Mamba\n\n"
-        "Computed in real units across all 20 forecast steps. Winner determined "
-        "by lower RMSE (the unambiguous accuracy metric of the four).\n\n"
+        "Mamba numbers from the teammate's re-trained models. Computed in real "
+        "units across all 20 forecast steps. Winner determined by lower RMSE.\n\n"
         "| Ocean | Variable | PatchTST r | Mamba r | PatchTST RMSE | Mamba RMSE | Winner (RMSE) |\n"
         "|---|---|---|---|---|---|---|\n"
         + "\n".join(md_rows)
@@ -172,7 +170,7 @@ def main():
         for d in disagreements:
             print(f"     - {d}")
 
-    print("\n[OK] Validation metrics comparison complete.")
+    print("\n[OK] Validation metrics comparison complete (updated Mamba numbers).")
 
 
 if __name__ == "__main__":

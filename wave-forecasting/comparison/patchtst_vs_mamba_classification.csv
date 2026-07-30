@@ -1,0 +1,5 @@
+ocean,patchtst_accuracy,mamba_accuracy,patchtst_macro_f1,mamba_macro_f1,patchtst_weighted_f1,mamba_weighted_f1,accuracy_winner,patchtst_acc_pct_vs_mamba,mamba_dir_circular_rmse_t6h_deg
+Atlantic,0.9638997470682915,0.85,0.9633707050846878,0.84,0.963846203385653,0.85,PatchTST,13.4,30.51
+Pacific,0.9686709588411129,0.88,0.9687581245797703,0.88,0.9687083180625935,0.88,PatchTST,10.1,29.31
+Bay of Bengal,0.9656386525638078,0.84,0.9653504517575235,0.84,0.9656159923336943,0.85,PatchTST,15.0,19.06
+Arabian Sea,0.9694038859507933,0.87,0.9696935645013491,0.87,0.9694021915488235,0.87,PatchTST,11.4,27.64

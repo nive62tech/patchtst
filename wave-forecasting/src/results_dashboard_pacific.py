@@ -64,7 +64,7 @@ def inv(values, mean, scale):
 
 def main():
     print("=" * 60)
-    print("PHASE 15 (ATLANTIC) - COMBINED RESULTS DASHBOARD")
+    print("PHASE 15 (PACIFIC) - COMBINED RESULTS DASHBOARD")
     print("=" * 60)
 
     device = "cuda" if torch.cuda.is_available() else "cpu"
